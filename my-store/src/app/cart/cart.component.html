@@ -1,1 +1,26 @@
-<p>cart works!</p>
+<div style="margin: 30px 20px">
+  <h1>Cart</h1>
+
+  <div *ngIf="cartItems.length > 0">
+    <div class="cart-container" *ngFor="let item of cartItems">
+      <div class="cart-item">
+        <img src="{{ item.url }}" />
+        <div style="flex-direction: column; margin-left: 30px">
+          <p style="font-weight: bold">{{ item.name }}</p>
+          <p>{{ item.price | currency }}</p>
+          <span
+            >Amount:
+            <input style="width: 30px" type="number" min="0" max="30" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <p class="cart-container"><b>Total: </b> {{ 0 | currency }}</p>
+  </div>
+
+  <div class="empty-cart-message" *ngIf="cartItems.length == 0">
+    <p>You haven't added any products to the shopping cart yet :)</p>
+  </div>
+</div>

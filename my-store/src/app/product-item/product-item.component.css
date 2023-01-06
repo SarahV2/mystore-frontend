@@ -2,7 +2,7 @@
     list-style-type: none;
     width: 290px;
     padding: 20px;
-    margin: 6px 6px;        
+    margin: 6px 20px;        
     border: 1px solid #33B5E5;
   } 
   
@@ -16,6 +16,6 @@
   }
   
   .select-input {
-    width: 108px; 
+    width: 60px; 
     margin-bottom: 8px;
   }

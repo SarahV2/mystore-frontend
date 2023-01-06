@@ -1,2 +1,17 @@
-<h1>Hello</h1>
-<app-product-list></app-product-list>
+<nav
+  style="
+    text-align: center;
+    background-color: rgba(39, 185, 245, 0.8);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+  "
+>
+  <h1 style="color: white">My Store</h1>
+
+  <a style="color: white" routerLink="/">Products List </a>
+  <span>|</span>
+  <a style="color: white" routerLink="/cart"> Cart </a>
+</nav>
+
+<router-outlet></router-outlet>

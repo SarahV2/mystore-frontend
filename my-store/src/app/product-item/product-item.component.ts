@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
+
 type Product = {
   id: number;
   name: string;
@@ -12,5 +15,16 @@ type Product = {
   styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent {
+  constructor(
+    // private route: ActivatedRoute,
+    private cartService: CartService
+  ) {}
+
   @Input() product!: Product;
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    window.alert(`${product.name} has been added to cart`);
+    console.log(this.cartService.getCartItems());
+  }
 }

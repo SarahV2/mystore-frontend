@@ -1,7 +1,15 @@
-
 <div class="product-container">
-    <img class="product-image" src={{product.url}}/>
-    <p>${{product.price}}</p>
-    <p>{{ product.name }}</p>
-    <div class="select-input"></div>
+  <img class="product-image" src="{{ product.url }}" />
+  <b style="margin: 5px 0px">{{ product.name }}</b>
+  <p>{{ product.price | currency }}</p>
+  <select style="margin: 10px 0px" class="select-input">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <button style="padding: 5px" type="button" (click)="addToCart(product)">
+    Add to cart
+  </button>
 </div>
