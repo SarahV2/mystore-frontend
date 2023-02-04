@@ -9,8 +9,14 @@
           <p style="font-weight: bold">{{ item.name }}</p>
           <p>{{ item.price | currency }}</p>
           <span
-            >Amount:
-            <input style="width: 30px" type="number" min="0" max="30" />
+            >Amountoo:
+            <input
+              style="width: 30px"
+              type="number"
+              min="0"
+              max="30"
+              [value]="item.quantity"
+            />
           </span>
         </div>
       </div>
